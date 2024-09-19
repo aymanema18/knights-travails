@@ -202,6 +202,9 @@ function knightMoves(cord1, cord2) {
     }
     do {
         for (const item of clone) {
+            if (cord1[0] === cord2[0] && cord1[1] === cord2[1]) {
+                break;
+            }
             if (item.index[0] === track[0] && item.index[1] === track[1]) {
                 count++;
                 stepTrack.push(track);
@@ -216,4 +219,4 @@ function knightMoves(cord1, cord2) {
     }
 }
 
-knightMoves([0, 0], [7, 7]);
+knightMoves([0, 0], [0, 0]);
